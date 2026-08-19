@@ -12,7 +12,8 @@
       "mcp__Raise_The_Bar_Website__wp_get_post_types",
       "mcp__Raise_The_Bar_Website__wp_get_media",
       "mcp__Raise_The_Bar_Website__wp_list_pages",
-      "mcp__Raise_The_Bar_Website__wp_get_taxonomies"
+      "mcp__Raise_The_Bar_Website__wp_get_taxonomies",
+      "mcp__Raise_The_Bar_Website__wp_update_post_meta"
     ]
   }
 }
