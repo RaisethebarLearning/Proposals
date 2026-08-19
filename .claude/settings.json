@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Raise_The_Bar_Website__wp_search",
+      "mcp__Raise_The_Bar_Website__wp_get_post_full",
+      "mcp__Raise_The_Bar_Website__wp_list_media",
+      "mcp__Raise_The_Bar_Website__wp_get_post_meta",
+      "mcp__Raise_The_Bar_Website__wp_get_page",
+      "mcp__Raise_The_Bar_Website__wp_list_cpt_items",
+      "mcp__Raise_The_Bar_Website__wp_count_terms",
+      "mcp__Raise_The_Bar_Website__wp_get_cpt_item",
+      "mcp__Raise_The_Bar_Website__wp_get_post_types",
+      "mcp__Raise_The_Bar_Website__wp_get_media",
+      "mcp__Raise_The_Bar_Website__wp_list_pages",
+      "mcp__Raise_The_Bar_Website__wp_get_taxonomies"
+    ]
+  }
+}
