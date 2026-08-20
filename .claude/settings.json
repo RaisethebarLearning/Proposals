@@ -13,7 +13,8 @@
       "mcp__Raise_The_Bar_Website__wp_get_media",
       "mcp__Raise_The_Bar_Website__wp_list_pages",
       "mcp__Raise_The_Bar_Website__wp_get_taxonomies",
-      "mcp__Raise_The_Bar_Website__wp_update_post_meta"
+      "mcp__Raise_The_Bar_Website__wp_update_post_meta",
+      "mcp__Raise_The_Bar_Website__*"
     ]
   }
 }
