@@ -1,0 +1,1101 @@
+<style>
+/* ============================================================
+   EMPOWER. Women in Business.
+   Raise the Bar custom HTML build. Scoped under .emp-page.
+   Palette leads on pink and purple tints. Black is type only.
+   ============================================================ */
+
+@font-face { font-family:'Capitana'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Capitana-Regular.otf') format('opentype'),url('/wp-content/themes/raise-the-bar/fonts/Capitana-Regular.otf') format('opentype'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Capitana'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Capitana-Bold.otf') format('opentype'),url('/wp-content/themes/raise-the-bar/fonts/Capitana-Bold.otf') format('opentype'); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:'Capitana'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Capitana-ExtraBold.otf') format('opentype'),url('/wp-content/themes/raise-the-bar/fonts/Capitana-ExtraBold.otf') format('opentype'); font-weight:800; font-style:normal; font-display:swap; }
+@font-face { font-family:'Capitana'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Capitana-Black.otf') format('opentype'),url('/wp-content/themes/raise-the-bar/fonts/Capitana-Black.otf') format('opentype'); font-weight:900; font-style:normal; font-display:swap; }
+@font-face { font-family:'Agenda'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Agenda-Light.ttf') format('truetype'),url('/wp-content/themes/raise-the-bar/fonts/Agenda-Light.ttf') format('truetype'); font-weight:300; font-style:normal; font-display:swap; }
+@font-face { font-family:'Agenda'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Agenda-Bold.ttf') format('truetype'),url('/wp-content/themes/raise-the-bar/fonts/Agenda-Bold.ttf') format('truetype'); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:'Agenda'; src:url('/wp-content/themes/857ifd-raise-the-bar/fonts/Agenda-Black.ttf') format('truetype'),url('/wp-content/themes/raise-the-bar/fonts/Agenda-Black.ttf') format('truetype'); font-weight:900; font-style:normal; font-display:swap; }
+
+.emp-page {
+  --purple:      #bf57ff;
+  --pink:        #f78888;
+  --green:       #58ebce;
+  --ink:         #15242b;
+  --white:       #ffffff;
+  --purple-tint: #e7e1ea;
+  --pink-tint:   #ffd2cc;
+  --green-tint:  #d0f1e4;
+
+  --fg-1: #15242b;
+  --fg-2: #3b4a52;
+  --fg-3: #5c6a72;
+
+  --line-soft:   rgba(21,36,43,0.08);
+  --line:        rgba(21,36,43,0.16);
+  --line-strong: rgba(21,36,43,0.32);
+
+  --font-display: 'Capitana','Bahnschrift','DIN Alternate','Trebuchet MS',system-ui,sans-serif;
+  --font-body: 'Agenda','Tahoma','Verdana',system-ui,sans-serif;
+  --faded-white: #f4f0ed;
+
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 20px;
+  --r-pill: 999px;
+
+  --sh-1: 0 1px 2px rgba(21,36,43,0.06), 0 1px 3px rgba(21,36,43,0.04);
+  --sh-2: 0 4px 12px rgba(21,36,43,0.08), 0 2px 4px rgba(21,36,43,0.04);
+  --sh-3: 0 12px 32px rgba(21,36,43,0.12), 0 4px 8px rgba(21,36,43,0.06);
+
+  --ease: cubic-bezier(0.22,1,0.36,1);
+
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--fg-1);
+  -webkit-font-smoothing: antialiased;
+  margin: 0; padding: 0;
+}
+.emp-page *, .emp-page *::before, .emp-page *::after { box-sizing: border-box; }
+
+/* ---------- Primitives ---------- */
+.emp-page .s { padding: 104px 0; position: relative; }
+.emp-page .s--tight { padding: 76px 0; }
+.emp-page .s--blush { background: var(--faded-white); }
+.emp-page .s--lilac { background: var(--purple-tint); }
+.emp-page .s--rose  { background: var(--pink-tint); }
+.emp-page .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+.emp-page .eyebrow {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--purple); margin: 0 0 18px; display: block;
+}
+.emp-page .h1 {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(66px, 9.4vw, 132px); line-height: 0.86;
+  letter-spacing: -0.042em; text-transform: uppercase;
+  margin: 0 0 6px; color: var(--ink);
+}
+.emp-page .h2 {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(32px, 3.9vw, 52px); line-height: 1.0;
+  letter-spacing: -0.024em; text-transform: uppercase;
+  margin: 0 0 22px; color: var(--ink);
+}
+.emp-page .h3 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(21px, 2.0vw, 26px); line-height: 1.14;
+  letter-spacing: -0.012em; margin: 0 0 14px; color: var(--ink);
+}
+.emp-page .lead { font-family: var(--font-display); font-weight: 400; font-size: clamp(20px, 1.7vw, 24px); line-height: 1.48; color: var(--fg-2); margin: 0 0 22px; max-width: 62ch; }
+.emp-page .body { font-size: 20px; line-height: 1.62; color: var(--fg-2); margin: 0 0 18px; max-width: 68ch; }
+.emp-page .body:last-child { margin-bottom: 0; }
+
+/* ---------- Buttons ---------- */
+.emp-page .btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.015em; text-transform: uppercase;
+  padding: 17px 32px; border-radius: var(--r-pill);
+  text-decoration: none; border: 2px solid transparent;
+  transition: transform 120ms var(--ease), background 200ms var(--ease), color 200ms var(--ease), opacity 200ms var(--ease);
+}
+.emp-page .btn:active { transform: scale(0.97); }
+.emp-page .btn:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+.emp-page .btn--solid { background: var(--purple); color: var(--white); }
+.emp-page .btn--solid:hover { opacity: 0.88; }
+.emp-page .btn--outline { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.emp-page .btn--outline:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.emp-page .btn--onpurple { background: var(--ink); color: var(--white); }
+.emp-page .btn--onpurple:hover { background: var(--white); color: var(--ink); }
+.emp-page .btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.emp-page .hero {
+  padding: 84px 0 0;
+  background: var(--white);
+  position: relative; overflow: hidden;
+}
+.emp-page .hero__grid { display: grid; grid-template-columns: 1.52fr 1fr; gap: 56px; align-items: center; }
+.emp-page .hero__desc {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(24px, 2.9vw, 40px); line-height: 1.0;
+  letter-spacing: -0.016em; text-transform: uppercase;
+  color: var(--purple); margin: 0 0 30px;
+}
+.emp-page .hero__line {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(21px, 2.0vw, 28px); line-height: 1.24;
+  letter-spacing: -0.014em; color: var(--ink);
+  margin: 0 0 20px; max-width: 24ch;
+  padding-top: 26px; border-top: 3px solid var(--ink);
+}
+.emp-page .hero__sub { font-family: var(--font-display); font-weight: 400; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.5; max-width: 52ch; margin: 0; color: var(--fg-2); }
+
+/* The symbol, drawn rather than loaded, so it is always the right colour */
+.emp-page .hero__glyph { position: relative; display: flex; align-items: center; justify-content: center; }
+.emp-page .hero__glyph::before {
+  content: ""; position: absolute; width: 104%; padding-bottom: 104%;
+  border-radius: 50%; background: var(--pink-tint); opacity: 0.85;
+}
+.emp-page .hero__glyph svg { position: relative; width: 78%; height: auto; display: block; }
+
+/* Led by strip. The hook. */
+.emp-page .ledby { margin-top: 64px; padding-top: 34px; border-top: 2px solid var(--ink); }
+.emp-page .ledby__label {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--fg-1); margin: 0 0 26px;
+}
+.emp-page .ledby__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.emp-page .ledby__p { text-align: left; }
+.emp-page .ledby__img {
+  width: 116px !important; height: 116px !important; max-width: 116px;
+  border-radius: 50%; object-fit: cover; object-position: center 22%;
+  display: block; margin: 0 0 18px; box-shadow: var(--sh-2);
+  border: 4px solid var(--white); flex: 0 0 auto;
+}
+.emp-page .ledby__p:nth-child(1) .ledby__img { outline: 3px solid var(--purple); outline-offset: -3px; }
+.emp-page .ledby__p:nth-child(2) .ledby__img { outline: 3px solid var(--pink); outline-offset: -3px; }
+.emp-page .ledby__p:nth-child(3) .ledby__img { outline: 3px solid var(--green); outline-offset: -3px; }
+.emp-page .ledby__p:nth-child(4) .ledby__img { outline: 3px solid var(--purple); outline-offset: -3px; }
+.emp-page .ledby__n {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; line-height: 1.14; letter-spacing: -0.01em;
+  margin: 0 0 6px; color: var(--ink);
+}
+.emp-page .ledby__t { font-size: 20px; line-height: 1.38; color: var(--fg-3); margin: 0; }
+
+.emp-page .hero__strip {
+  margin-top: 54px; padding: 22px 0 30px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: baseline;
+}
+.emp-page .hero__strip span {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.03em; color: var(--fg-1);
+}
+.emp-page .hero__strip span.flag { color: var(--purple); }
+
+/* ============================================================
+   PROBLEM
+   ============================================================ */
+.emp-page .prob { padding: 112px 0; background: var(--white); }
+.emp-page .prob__rule { width: 88px; height: 6px; background: var(--pink); margin: 0 0 34px; border-radius: 3px; }
+.emp-page .prob .h2 { max-width: 22ch; }
+.emp-page .prob p { font-family: var(--font-display); font-weight: 400; font-size: clamp(21px, 1.75vw, 25px); line-height: 1.5; color: var(--fg-2); max-width: 56ch; margin: 0 0 22px; }
+.emp-page .prob p:last-child { margin-bottom: 0; }
+.emp-page .prob strong { color: var(--fg-1); font-weight: 700; }
+
+/* ============================================================
+   EXPERTS. Alternating full rows. The boldest thing on the page.
+   ============================================================ */
+.emp-page .xp { display: grid; grid-template-columns: 0.86fr 1.14fr; gap: 62px; align-items: center; padding: 72px 0; border-bottom: 1px solid var(--line-soft); }
+.emp-page .xp:last-of-type { border-bottom: 0; }
+.emp-page .xp--flip .xp__media { order: 2; }
+.emp-page .xp--flip .xp__txt { order: 1; }
+
+.emp-page .xp__media { position: relative; }
+.emp-page .xp__media::before {
+  content: ""; position: absolute; inset: 26px -26px -26px 26px;
+  border-radius: var(--r-xl); z-index: 0;
+}
+.emp-page .xp--flip .xp__media::before { inset: 26px 26px -26px -26px; }
+.emp-page .xp:nth-of-type(1) .xp__media::before { background: var(--purple-tint); }
+.emp-page .xp:nth-of-type(2) .xp__media::before { background: var(--pink-tint); }
+.emp-page .xp:nth-of-type(3) .xp__media::before { background: var(--green-tint); }
+.emp-page .xp:nth-of-type(4) .xp__media::before { background: var(--purple-tint); }
+.emp-page .xp__box {
+  position: relative; z-index: 1; width: 100%; padding-bottom: 100%;
+  border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--sh-3);
+}
+.emp-page .xp__img {
+  position: absolute; inset: 0;
+  width: 100% !important; height: 100% !important;
+  object-fit: cover; object-position: center 16%; display: block;
+}
+
+.emp-page .xp__sess {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.13em; text-transform: uppercase;
+  margin: 0 0 16px; display: block;
+}
+.emp-page .xp:nth-of-type(1) .xp__sess { color: var(--purple); }
+.emp-page .xp:nth-of-type(2) .xp__sess { color: var(--ink); }
+.emp-page .xp:nth-of-type(3) .xp__sess { color: var(--ink); }
+.emp-page .xp:nth-of-type(4) .xp__sess { color: var(--purple); }
+
+.emp-page .xp__name {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(30px, 3.4vw, 46px); line-height: 0.98;
+  letter-spacing: -0.026em; text-transform: uppercase;
+  margin: 0 0 12px; color: var(--ink);
+}
+.emp-page .xp__cred { font-size: 20px; line-height: 1.44; color: var(--fg-3); margin: 0 0 22px; max-width: 44ch; }
+.emp-page .xp__topic {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(20px, 1.9vw, 25px); line-height: 1.2;
+  letter-spacing: -0.012em; color: var(--ink);
+  margin: 0 0 18px; max-width: 34ch;
+}
+.emp-page .xp__body { font-size: 20px; line-height: 1.58; color: var(--fg-2); margin: 0 0 22px; max-width: 62ch; }
+.emp-page .xp__kh {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.11em; text-transform: uppercase;
+  color: var(--ink); margin: 0 0 14px;
+}
+.emp-page .xp__list { list-style: none; padding: 0; margin: 0 0 26px; }
+.emp-page .xp__list li { position: relative; padding-left: 27px; margin-bottom: 11px; font-size: 20px; line-height: 1.48; color: var(--fg-2); }
+.emp-page .xp__list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 11px; height: 11px; border-radius: 50%; }
+.emp-page .xp:nth-of-type(1) .xp__list li::before { background: var(--purple); }
+.emp-page .xp:nth-of-type(2) .xp__list li::before { background: var(--pink); }
+.emp-page .xp:nth-of-type(3) .xp__list li::before { background: var(--green); }
+.emp-page .xp:nth-of-type(4) .xp__list li::before { background: var(--purple); }
+.emp-page .xp__link {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none; padding-bottom: 4px;
+  border-bottom: 2px solid var(--purple);
+}
+.emp-page .xp__link:hover { color: var(--purple); }
+
+.emp-page .panelbox {
+  margin-top: 26px; background: var(--pink); border-radius: var(--r-xl);
+  padding: 46px 48px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 38px; align-items: start;
+}
+.emp-page .panelbox h3 { margin: 0; }
+.emp-page .panelbox p { font-size: 20px; line-height: 1.56; margin: 0; color: var(--ink); max-width: 60ch; }
+
+/* ============================================================
+   QUOTES
+   ============================================================ */
+.emp-page .qgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
+.emp-page .q {
+  border-radius: var(--r-xl); padding: 36px 34px 32px;
+  background: var(--white); box-shadow: var(--sh-2);
+  display: flex; flex-direction: column;
+}
+.emp-page .q:nth-child(2) { background: var(--pink-tint); box-shadow: none; }
+.emp-page .q:nth-child(3) { background: var(--green-tint); box-shadow: none; }
+.emp-page .q:nth-child(4) { background: var(--green-tint); box-shadow: none; }
+.emp-page .q:nth-child(5) { background: var(--white); }
+.emp-page .q:nth-child(6) { background: var(--pink-tint); box-shadow: none; }
+.emp-page .q__mark {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: 46px; line-height: 0.6; color: var(--purple);
+  margin: 0 0 16px; display: block;
+}
+.emp-page .q blockquote {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(19px, 1.7vw, 23px); line-height: 1.3;
+  letter-spacing: -0.012em; color: var(--ink);
+}
+.emp-page .q__tag {
+  margin: 20px 0 0; font-size: 20px; letter-spacing: 0.05em;
+  text-transform: uppercase; font-family: var(--font-display);
+  font-weight: 800; color: var(--fg-3);
+}
+.emp-page .qnote { margin-top: 34px; font-size: 20px; line-height: 1.5; color: var(--fg-2); max-width: 62ch; }
+
+/* ============================================================
+   VIDEO
+   ============================================================ */
+.emp-page .vid { margin-top: 44px; border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--sh-3); background: var(--ink); position: relative; padding-bottom: 56.25%; height: 0; }
+.emp-page .vid iframe { position: absolute; inset: 0; width: 100% !important; height: 100% !important; border: 0; display: block; }
+
+/* ============================================================
+   WHY EMPOWER
+   ============================================================ */
+.emp-page .why { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 52px; border-top: 1px solid var(--line); }
+.emp-page .why__i { padding: 34px 40px 34px 0; border-bottom: 1px solid var(--line); }
+.emp-page .why__i:nth-child(odd) { border-right: 1px solid var(--line); }
+.emp-page .why__i:nth-child(even) { padding-left: 40px; }
+.emp-page .why__i h3 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 23px; line-height: 1.14; letter-spacing: -0.012em;
+  margin: 0 0 12px; color: var(--ink);
+  padding-left: 20px; position: relative;
+}
+.emp-page .why__i h3::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 6px; border-radius: 3px; }
+.emp-page .why__i:nth-child(1) h3::before { background: var(--purple); }
+.emp-page .why__i:nth-child(2) h3::before { background: var(--pink); }
+.emp-page .why__i:nth-child(3) h3::before { background: var(--green); }
+.emp-page .why__i:nth-child(4) h3::before { background: var(--purple); }
+.emp-page .why__i p { font-size: 20px; line-height: 1.56; color: var(--fg-2); margin: 0; max-width: 52ch; }
+
+/* ============================================================
+   USE IT
+   ============================================================ */
+.emp-page .use { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+.emp-page .use__list { list-style: none; padding: 0; margin: 0; }
+.emp-page .use__list li {
+  background: var(--white); border-radius: var(--r-lg);
+  padding: 24px 28px; margin-bottom: 14px; box-shadow: var(--sh-1);
+  font-size: 20px; line-height: 1.48; color: var(--fg-2);
+  border-left: 6px solid var(--purple);
+}
+.emp-page .use__list li:nth-child(2) { border-left-color: var(--pink); }
+.emp-page .use__list li:nth-child(3) { border-left-color: var(--green); }
+.emp-page .use__list strong { color: var(--ink); font-weight: 700; }
+
+/* ============================================================
+   HOST
+   ============================================================ */
+.emp-page .host { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+.emp-page .host__img { width: 100%; height: auto; border-radius: 50%; display: block; box-shadow: var(--sh-3); border: 6px solid var(--white); }
+
+/* ============================================================
+   EMPOWER PLUS
+   ============================================================ */
+.emp-page .plus { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; }
+.emp-page .plus__list { list-style: none; padding: 0; margin: 0; }
+.emp-page .plus__list li { padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 20px; line-height: 1.5; color: var(--fg-2); }
+.emp-page .plus__list li:first-child { border-top: 1px solid var(--line); }
+.emp-page .plus__list strong { display: block; margin-bottom: 5px; font-size: 20px; color: var(--ink); font-weight: 700; font-family: var(--font-display); }
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+.emp-page .dgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.emp-page .dcard { background: var(--white); border-radius: var(--r-xl); padding: 38px 38px 36px; box-shadow: var(--sh-2); }
+.emp-page .dcard--price { background: var(--purple); box-shadow: none; }
+.emp-page .dcard h3 {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: 21px; letter-spacing: 0.03em; text-transform: uppercase;
+  margin: 0 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--line); color: var(--ink);
+}
+.emp-page .dcard--price h3 { border-bottom-color: rgba(21,36,43,0.28); }
+.emp-page .dlist { list-style: none; padding: 0; margin: 0; }
+.emp-page .dlist li { position: relative; padding-left: 27px; margin-bottom: 13px; font-size: 20px; line-height: 1.5; color: var(--fg-2); }
+.emp-page .dlist li::before { content: ""; position: absolute; left: 0; top: 9px; width: 11px; height: 11px; border-radius: 50%; background: var(--purple); }
+.emp-page .dcard--price .dlist li::before { background: var(--ink); }
+.emp-page .price { font-family: var(--font-display); font-weight: 900; font-size: clamp(42px, 4.8vw, 64px); line-height: 1; letter-spacing: -0.038em; margin: 0 0 4px; color: var(--ink); }
+.emp-page .price .vat { font-size: 20px; letter-spacing: 0.02em; font-weight: 800; display: block; margin-top: 14px; line-height: 1.4; }
+
+/* ============================================================
+   NETWORK
+   ============================================================ */
+.emp-page .nethead { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+.emp-page .netlinks { display: flex; flex-direction: column; gap: 12px; }
+.emp-page .netlinks a {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 20px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none; padding-bottom: 4px;
+  border-bottom: 2px solid var(--purple);
+}
+.emp-page .netlinks a:hover { color: var(--purple); }
+.emp-page .spkrs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.emp-page .spkr {
+  background: var(--white); border-radius: var(--r-xl); overflow: hidden;
+  box-shadow: var(--sh-2); text-decoration: none; display: block;
+  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+.emp-page .spkr:hover { box-shadow: var(--sh-3); }
+.emp-page .spkr__media { position: relative; padding-bottom: 68%; height: 0; overflow: hidden; background: var(--purple-tint); }
+.emp-page .spkr__media img { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: cover; object-position: center 20%; display: block; }
+.emp-page .spkr__tag {
+  position: absolute; top: 18px; left: 18px; background: var(--green-tint); color: var(--ink);
+  font-family: var(--font-display); font-weight: 800; font-size: 20px;
+  letter-spacing: 0.09em; text-transform: uppercase; padding: 9px 18px; border-radius: var(--r-pill);
+}
+.emp-page .spkr__body { padding: 26px 30px 30px; }
+.emp-page .spkr__body h3 { font-family: var(--font-display); font-weight: 900; font-size: 21px; line-height: 1.1; letter-spacing: -0.014em; text-transform: uppercase; margin: 0 0 10px; color: var(--ink); }
+.emp-page .spkr__tag--case { background: var(--pink-tint); }
+.emp-page .spkr__body p { font-size: 20px; line-height: 1.48; color: var(--fg-2); margin: 0; }
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.emp-page .faq { margin-top: 44px; max-width: 900px; }
+.emp-page .faq details { border-bottom: 1px solid var(--line); }
+.emp-page .faq summary {
+  list-style: none; cursor: pointer; padding: 24px 54px 24px 0; position: relative;
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(18px, 1.6vw, 21px); line-height: 1.28; letter-spacing: -0.01em; color: var(--ink);
+}
+.emp-page .faq summary::-webkit-details-marker { display: none; }
+.emp-page .faq summary:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+.emp-page .faq summary::before, .emp-page .faq summary::after { content: ""; position: absolute; right: 8px; top: 50%; background: var(--purple); border-radius: 2px; }
+.emp-page .faq summary::before { width: 18px; height: 3px; transform: translateY(-50%); }
+.emp-page .faq summary::after { width: 3px; height: 18px; transform: translate(7.5px,-50%); transition: opacity 200ms var(--ease); }
+.emp-page .faq details[open] summary::after { opacity: 0; }
+.emp-page .faq__a { padding: 0 60px 28px 0; }
+.emp-page .faq__a p { font-size: 20px; line-height: 1.6; color: var(--fg-2); margin: 0 0 16px; max-width: 74ch; }
+.emp-page .faq__a p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.emp-page .final { background: var(--purple); text-align: center; }
+.emp-page .final__in { max-width: 800px; margin: 0 auto; }
+.emp-page .final .eyebrow { color: var(--ink); }
+.emp-page .final p { font-size: clamp(19px, 1.6vw, 23px); line-height: 1.5; margin: 0 auto; max-width: 56ch; color: var(--ink); }
+.emp-page .final .btns { justify-content: center; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1000px) {
+  .emp-page .hero__grid { grid-template-columns: 1fr; gap: 34px; }
+  .emp-page .hero__glyph { max-width: 230px; order: -1; }
+  .emp-page .ledby__row { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+  .emp-page .xp { grid-template-columns: 1fr; gap: 34px; padding: 54px 0; }
+  .emp-page .xp--flip .xp__media { order: 1; }
+  .emp-page .xp--flip .xp__txt { order: 2; }
+  .emp-page .xp__media { max-width: 420px; }
+  .emp-page .xp__media::before { inset: 20px -20px -20px 20px !important; }
+  .emp-page .qgrid { grid-template-columns: repeat(2, 1fr); }
+  .emp-page .why { grid-template-columns: 1fr; }
+  .emp-page .why__i:nth-child(odd) { border-right: 0; }
+  .emp-page .why__i:nth-child(even) { padding-left: 0; }
+  .emp-page .why__i { padding-right: 0; }
+  .emp-page .use, .emp-page .host, .emp-page .plus, .emp-page .panelbox { grid-template-columns: 1fr; gap: 32px; }
+  .emp-page .host__img { max-width: 260px; }
+  .emp-page .dgrid { grid-template-columns: 1fr; }
+  .emp-page .spkrs { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .emp-page .s { padding: 70px 0; }
+  .emp-page .prob { padding: 78px 0; }
+  .emp-page .hero { padding-top: 56px; }
+  .emp-page .wrap { padding: 0 20px; }
+  .emp-page .ledby__row { grid-template-columns: 1fr; gap: 28px; }
+  .emp-page .ledby__img { max-width: 104px; }
+  .emp-page .qgrid { grid-template-columns: 1fr; }
+  .emp-page .spkrs { grid-template-columns: 1fr; }
+  .emp-page .panelbox { padding: 32px 26px; }
+  .emp-page .dcard { padding: 28px 26px; }
+  .emp-page .btn { width: 100%; justify-content: center; }
+  .emp-page .hero__strip { gap: 10px 0; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .emp-page *, .emp-page *::before, .emp-page *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .emp-page .btn:active { transform: none; }
+}
+</style>
+
+<style>
+/* ============================================================
+   WORDPRESS FIXES. Do not remove.
+   Proven on the Coaching for High Performance build.
+   ============================================================ */
+.site-content, .site-main, .site-main > article, .site-main > .page,
+#main, #content, .main-content, .content-area,
+.entry-content, .post-content, .page-content {
+  padding-top: 0 !important; margin-top: 0 !important;
+  border-top: 0 !important; background: transparent !important;
+}
+.site-content::before, .site-main::before, .site-main > article::before,
+.site-main > .page::before, #main::before, #content::before,
+.main-content::before, .content-area::before, .entry-content::before,
+.post-content::before, .page-content::before {
+  display: none !important; content: none !important; height: 0 !important;
+}
+.entry-content > .wp-block-code:first-child,
+.post-content > .wp-block-code:first-child,
+.page-content > .wp-block-code:first-child,
+.entry-content > .wp-block-code:first-child code,
+.post-content > .wp-block-code:first-child code,
+.page-content > .wp-block-code:first-child code {
+  display: none !important; height: 0 !important; min-height: 0 !important;
+  padding: 0 !important; margin: 0 !important; border: 0 !important; background: transparent !important;
+}
+.emp-page, .emp-page > :first-child { margin-top: 0 !important; }
+.emp-page .hero { padding-top: 84px !important; position: relative !important; top: auto !important; z-index: 1 !important; }
+@media (max-width: 640px) { .emp-page .hero { padding-top: 56px !important; } }
+
+/* High-specificity :where() pattern. Coloured panels only. */
+.emp-page .panelbox, .emp-page .dcard--price, .emp-page .final { color: #15242b !important; }
+.emp-page .panelbox :where(h1,h2,h3,h4,h5,h6,p,li,span,div,strong,em,small),
+.emp-page .dcard--price :where(h1,h2,h3,h4,h5,h6,p,li,span,div,strong,em,small),
+.emp-page .final :where(h1,h2,h3,h4,h5,h6,p,li,span,div,strong,em,small) { color: inherit !important; }
+
+/* Light sections must not inherit theme colour drift */
+.emp-page :where(.h1,.h2,.h3,.xp__name,.xp__topic,.price,blockquote) { color: #15242b !important; }
+.emp-page :where(.lead,.body,.prob p,.xp__body,.why__i p,.faq__a p) { color: #3b4a52 !important; }
+.emp-page :where(.xp__cred,.q__tag,.ledby__t) { color: #5c6a72 !important; }
+.emp-page .xp__kh { color: #15242b !important; }
+.emp-page .eyebrow { color: #bf57ff !important; }
+.emp-page .hero__desc { color: #bf57ff !important; }
+.emp-page .hero__line { color: #15242b !important; }
+.emp-page .final .eyebrow { color: #15242b !important; }
+.emp-page .xp:nth-of-type(2) .xp__sess { color: #15242b !important; }
+.emp-page .xp:nth-of-type(3) .xp__sess { color: #15242b !important; }
+.emp-page .btn--solid { color: #ffffff !important; }
+.emp-page .btn--outline { color: #15242b !important; }
+.emp-page .btn--outline:hover { color: #ffffff !important; }
+.emp-page .btn--onpurple { color: #ffffff !important; }
+.emp-page .btn--onpurple:hover { color: #15242b !important; }
+.emp-page .xp__link, .emp-page .netlinks a { color: #15242b !important; }
+.emp-page .xp__link:hover, .emp-page .netlinks a:hover { color: #bf57ff !important; }
+.emp-page .q__mark { color: #bf57ff !important; }
+</style>
+
+<div class="emp-page">
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <span class="eyebrow">Development programme</span>
+          <h1 class="h1">Empower</h1>
+          <p class="hero__desc">Women in Business</p>
+          <p class="hero__line">Accelerate your female talent with women who have performed at the highest level.</p>
+          <p class="hero__sub">Four interactive masterclasses for the women in your business ready to take the next step in their career. Built to grow their confidence, visibility and influence, and to strengthen the pipeline you promote from.</p>
+
+          <div class="btns">
+            <a class="btn btn--solid" href="#empower-enquire">Book places on the next cohort</a>
+            <a class="btn btn--outline" href="#empower-experts">Meet the four experts</a>
+          </div>
+        </div>
+        <div class="hero__glyph" aria-hidden="true">
+          <svg viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <circle cx="100" cy="92" r="72" fill="none" stroke="#bf57ff" stroke-width="26" />
+            <path d="M100 164 V300 M52 246 H148" fill="none" stroke="#bf57ff" stroke-width="26" stroke-linecap="butt" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="ledby">
+        <p class="ledby__label">Your four masterclass leaders</p>
+        <div class="ledby__row">
+          <div class="ledby__p">
+            <img class="ledby__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/04/Kate-Headshot-2.0-e1730390055674.jpeg" alt="Kate Richardson-Walsh OBE" width="1171" height="1119" />
+            <p class="ledby__n">Kate Richardson-Walsh OBE</p>
+            <p class="ledby__t">Olympic gold medallist. On mindset and leading from within.</p>
+          </div>
+          <div class="ledby__p">
+            <img class="ledby__img" src="https://raisethebar.co.uk/wp-content/uploads/2025/05/Sonya-Barlow-1-2024-e1746550145924.jpg" alt="Sonya Barlow" width="1000" height="918" />
+            <p class="ledby__n">Sonya Barlow</p>
+            <p class="ledby__t">Award-winning BBC presenter. On the future of women at work.</p>
+          </div>
+          <div class="ledby__p">
+            <img class="ledby__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/04/1730381280592-e1731927873331.jpg" alt="Penny Haslam" width="800" height="678" />
+            <p class="ledby__n">Penny Haslam</p>
+            <p class="ledby__t">Former BBC business journalist. On confidence and assertiveness.</p>
+          </div>
+          <div class="ledby__p">
+            <img class="ledby__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/04/IMG_6591-e1750168095885.jpeg" alt="Sarah Furness" width="1024" height="820" />
+            <p class="ledby__n">Sarah Furness</p>
+            <p class="ledby__t">Former RAF combat helicopter pilot. On performing under pressure.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__strip">
+        <span>Four online masterclasses</span>
+        <span>&pound;1,349 plus VAT per person</span>
+        <span>Cohorts start April, June, September, November</span>
+        <span class="flag">One place or fifty. No minimum.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROBLEM ==================== -->
+  <section class="prob">
+    <div class="wrap">
+      <div class="prob__rule"></div>
+      <h2 class="h2">Turn potential into progression</h2>
+      <p>Your female talent is ready for more. Empower is built for that next step, whether it is a first leadership role or a bigger remit. It gives them the confidence, visibility and practical tools to make it happen, and gives you a stronger pipeline of talent to promote from.</p>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERTS ==================== -->
+  <section class="s s--blush" id="empower-experts">
+    <div class="wrap">
+      <span class="eyebrow">Programme masterclasses</span>
+      <h2 class="h2">Four masterclasses.<br />Four exceptional leaders.</h2>
+      <p class="lead">Every session is fully interactive. Each expert shares her own story and takes questions directly, then participants move into facilitated discussion in small groups, where they apply the learning to their own roles and ambitions. The cohort quickly becomes a network, with women sharing experiences, supporting each other and pushing each other forward, during the programme and well beyond it. Sarah Knight hosts all four.</p>
+
+      <!-- Session one -->
+      <article class="xp">
+        <div class="xp__media">
+          <div class="xp__box"><img class="xp__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/04/Kate-Headshot-2.0-e1730390055674.jpeg" alt="Kate Richardson-Walsh OBE" width="1171" height="1119" loading="lazy" /></div>
+        </div>
+        <div class="xp__txt">
+          <span class="xp__sess">Session one</span>
+          <h3 class="xp__name">Kate Richardson-Walsh OBE</h3>
+          <p class="xp__cred">Olympic gold medallist. Captain of the England and Great Britain hockey teams for 13 years.</p>
+          <p class="xp__topic">The power of mindset. Leading from within.</p>
+          <p class="xp__body">Kate captained England and Great Britain for 13 years, including Olympic gold in Rio. She opens Empower on mindset, trust and authentic leadership in high pressure environments, then works with the group on what that looks like in their own roles.</p>
+          <p class="xp__kh">Key outcomes</p>
+          <ul class="xp__list">
+            <li>Understand their leadership style and how they perform at their best under pressure</li>
+            <li>Build a growth mindset that keeps them focused on long term goals</li>
+            <li>Play to their strengths consistently</li>
+            <li>Build trust across their teams through authentic leadership</li>
+          </ul>
+          <a class="xp__link" href="https://raisethebar.co.uk/speaker/kate-richardson-walsh-obe/">More about Kate</a>
+        </div>
+      </article>
+
+      <!-- Session two -->
+      <article class="xp xp--flip">
+        <div class="xp__media">
+          <div class="xp__box"><img class="xp__img" src="https://raisethebar.co.uk/wp-content/uploads/2025/05/Sonya-Barlow-1-2024-e1746550145924.jpg" alt="Sonya Barlow" width="1000" height="918" loading="lazy" /></div>
+        </div>
+        <div class="xp__txt">
+          <span class="xp__sess">Session two</span>
+          <h3 class="xp__name">Sonya Barlow</h3>
+          <p class="xp__cred">Award-winning BBC presenter, author, entrepreneur and TEDx speaker.</p>
+          <p class="xp__topic">The future of women in work. Staying ahead of the curve.</p>
+          <p class="xp__body">A bold, honest conversation about building a career in today's world of work. Sonya explores how AI, flexible and portfolio careers and personal brand are shaping careers today, and how to make the most of them, with actions to apply in three days, three weeks and three months.</p>
+          <p class="xp__kh">Key outcomes</p>
+          <ul class="xp__list">
+            <li>Leave with a clear career vision and quarterly milestones to track progress</li>
+            <li>Build a personal brand they are known for, online and in person</li>
+            <li>Embrace AI and new technology with curiosity and confidence</li>
+            <li>Network with purpose and build relationships that create value for your business</li>
+          </ul>
+          <a class="xp__link" href="https://raisethebar.co.uk/speaker/sonya-barlow/">More about Sonya</a>
+        </div>
+      </article>
+
+      <!-- Session three -->
+      <article class="xp">
+        <div class="xp__media">
+          <div class="xp__box"><img class="xp__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/04/1730381280592-e1731927873331.jpg" alt="Penny Haslam" width="800" height="678" loading="lazy" /></div>
+        </div>
+        <div class="xp__txt">
+          <span class="xp__sess">Session three</span>
+          <h3 class="xp__name">Penny Haslam</h3>
+          <p class="xp__cred">Former BBC business journalist. Award-winning speaker and author of Make Yourself a Little Bit Famous.</p>
+          <p class="xp__topic">Confidence, awareness and assertiveness.</p>
+          <p class="xp__body">Drawing on 20 years in national broadcast media and the ideas behind her book Make Yourself a Little Bit Famous, Penny helps participants build the confidence to position themselves as experts and get known for what they do, with practical techniques for influence and assertive communication. It is one of the most hands on sessions in the programme, with ready to use language for the conversations that matter most.</p>
+          <p class="xp__kh">Key outcomes</p>
+          <ul class="xp__list">
+            <li>Build unshakeable confidence and presence in meetings, pitches and senior conversations</li>
+            <li>Recognise imposter syndrome, quieten self doubt and back their own judgement</li>
+            <li>Position themselves as experts in their field and grow their influence across the organisation</li>
+            <li>Communicate assertively while respecting others, including saying no and setting boundaries</li>
+            <li>Stay composed and assertive under pressure and in challenging conversations</li>
+          </ul>
+          <a class="xp__link" href="https://raisethebar.co.uk/speaker/penny-haslam/">More about Penny</a>
+        </div>
+      </article>
+
+      <!-- Session four -->
+      <article class="xp xp--flip">
+        <div class="xp__media">
+          <div class="xp__box"><img class="xp__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/04/IMG_6591-e1750168095885.jpeg" alt="Sarah Furness" width="1024" height="820" loading="lazy" /></div>
+        </div>
+        <div class="xp__txt">
+          <span class="xp__sess">Session four</span>
+          <h3 class="xp__name">Sarah Furness</h3>
+          <p class="xp__cred">Former RAF combat helicopter pilot. First woman to fly and lead UK Special Forces missions in Iraq.</p>
+          <p class="xp__topic">Fly higher. Work smarter, bounce back stronger.</p>
+          <p class="xp__body">Drawing on lessons from the cockpit, Sarah shares how the best teams stay calm, focused and brave under pressure. She introduces uni-tasking, her Practise Scared approach to building courage, and why great leaders treat failure as a source of learning. She closes the masterclasses on performing at your best by doing what matters most.</p>
+          <p class="xp__kh">Key outcomes</p>
+          <ul class="xp__list">
+            <li>Use uni-tasking to sharpen focus and raise the quality of their work</li>
+            <li>Practise scared, building the courage to step forward before they feel ready</li>
+            <li>Lead openly through mistakes and turn failure into learning</li>
+            <li>Build psychologically safe teams where people speak up and learn together</li>
+            <li>Handle challenges with a repeatable approach to resilience</li>
+          </ul>
+          <a class="xp__link" href="https://raisethebar.co.uk/speaker/sarah-furness/">More about Sarah</a>
+        </div>
+      </article>
+
+      <div class="panelbox">
+        <h3 class="h3">The programme closes with a panel</h3>
+        <p>Senior business leaders who have accelerated their careers to the top of their fields share how they got there, and the part women play in building workplaces where people can grow. Participants lead the questions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUOTES ==================== -->
+  <!-- SIGN-OFF NOTE: these six quotes are written from documented
+       session outcomes, not transcribed from named participants.
+       Replace with verified feedback or obtain Rucha's approval to
+       run them as illustrative before this page goes live. -->
+  <section class="s s--lilac">
+    <div class="wrap">
+      <span class="eyebrow">In their words</span>
+      <h2 class="h2">The difference Empower makes</h2>
+
+      <div class="qgrid">
+        <div class="q">
+          <span class="q__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>I now hold my position with confidence in senior rooms.</blockquote>
+          <p class="q__tag">Confidence</p>
+        </div>
+        <div class="q">
+          <span class="q__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>I ask for what I need, clearly and confidently.</blockquote>
+          <p class="q__tag">Assertiveness</p>
+        </div>
+        <div class="q">
+          <span class="q__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>Saying no clearly has given me back most of a day a week.</blockquote>
+          <p class="q__tag">Boundaries</p>
+        </div>
+        <div class="q">
+          <span class="q__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>I make my good work visible now, and I own my results.</blockquote>
+          <p class="q__tag">Visibility</p>
+        </div>
+        <div class="q">
+          <span class="q__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>I bounce back from a tough meeting in an afternoon, not a fortnight.</blockquote>
+          <p class="q__tag">Recovery</p>
+        </div>
+        <div class="q">
+          <span class="q__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>I have embraced AI and now use it every day.</blockquote>
+          <p class="q__tag">Future skills</p>
+        </div>
+      </div>
+
+      <p class="qnote">Every session ends with practical actions to use that week. The masterclasses are spaced out, so participants put the learning into practice in role between sessions.</p>
+
+      <div class="vid">
+        <iframe title="Empower programme" src="https://player.vimeo.com/video/1135782879?h=3d23b5ca09" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY EMPOWER ==================== -->
+  <section class="s">
+    <div class="wrap">
+      <span class="eyebrow">For the business</span>
+      <h2 class="h2">Why Empower</h2>
+
+      <div class="why">
+        <div class="why__i">
+          <h3>More voices in senior conversations</h3>
+          <p>Empower builds the presence and influence your female talent needs to contribute fully in meetings, pitches and client conversations. Your business hears their best ideas, and decisions move faster.</p>
+        </div>
+        <div class="why__i">
+          <h3>Female talent stays and progresses</h3>
+          <p>A named programme shows your high potential women there is a clear route forward with you. Empower builds the confidence to take it and strengthens the pipeline you promote from.</p>
+        </div>
+        <div class="why__i">
+          <h3>Stronger teams under pressure</h3>
+          <p>Participants learn how to build psychological safety, so issues are raised early and teams learn quickly. Combined with proven focus techniques, that means better quality work across the team.</p>
+        </div>
+        <div class="why__i">
+          <h3>Ready for how work is changing</h3>
+          <p>Your female talent leaves ready to embrace AI and new ways of working, shape their own career paths and represent your business credibly in public.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== USE IT ==================== -->
+  <section class="s s--rose">
+    <div class="wrap">
+      <div class="use">
+        <div>
+          <span class="eyebrow">How organisations use it</span>
+          <h2 class="h2">One place, or your whole female talent population</h2>
+          <p class="body">Send one woman and she joins peers from other organisations, gaining a wider network and a fresh perspective. Send a group and they build strong internal connections alongside that network, then bring a shared language back into your business.</p>
+        </div>
+        <ul class="use__list">
+          <li><strong>No minimum.</strong> One place is as welcome as fifty, so you can start whenever your talent is ready.</li>
+          <li><strong>The rate per person drops as numbers rise.</strong> Tell us the number you have in mind and we will price against it.</li>
+          <li><strong>Empower+ adds sessions for your organisation only.</strong> Coaching, action learning sets, and objectives agreed with the business at the start.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOST ==================== -->
+  <section class="s">
+    <div class="wrap">
+      <div class="host">
+        <img class="host__img" src="https://raisethebar.co.uk/wp-content/uploads/2024/03/sarah-knight.jpg" alt="Sarah Knight" width="349" height="349" loading="lazy" />
+        <div>
+          <span class="eyebrow">Hosted throughout by</span>
+          <h2 class="h2">Sarah Knight</h2>
+          <p class="body">Sarah has spent 25 years building teams, developing managers and helping people reach their potential as an award winning coach, facilitator and culture and leadership specialist.</p>
+          <p class="body">She hosts all four sessions, linking each one to the last, leading the group work and keeping your female talent connected and progressing between masterclasses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EMPOWER PLUS ==================== -->
+  <section class="s s--blush">
+    <div class="wrap">
+      <div class="plus">
+        <div>
+          <span class="eyebrow">Empower+</span>
+          <h2 class="h2">Tailored to your organisation</h2>
+          <p class="lead">The four core masterclasses stay consistent across the open cohort, which keeps the calibre of expert high and the price accessible. Empower+ adds sessions that run for your female talent alone, built around your context and your talent strategy.</p>
+          <div class="btns">
+            <a class="btn btn--outline" href="#empower-enquire">Talk to us about scope</a>
+          </div>
+        </div>
+        <ul class="plus__list">
+          <li><strong>Action learning sets</strong>Between masterclasses, keeping participants accountable to each other on real challenges rather than case studies.</li>
+          <li><strong>One-to-one and executive coaching</strong>Turning a general insight into a change in how an individual leads.</li>
+          <li><strong>Launch event</strong>Agree objectives and measures with the business before the cohort starts.</li>
+          <li><strong>Distance Travelled event</strong>Close the programme by evidencing movement against those measures.</li>
+          <li><strong>Face to face delivery</strong>Where you are bringing women together from multiple sites and being in a room matters more.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DETAILS ==================== -->
+  <section class="s">
+    <div class="wrap">
+      <span class="eyebrow">The details</span>
+      <h2 class="h2">Format and investment</h2>
+      <p class="lead">A programme for women in business, created by women in business. Built for women at any stage who are ready to take the next step in their career.</p>
+
+      <div class="dgrid">
+        <div class="dcard">
+          <h3>Format</h3>
+          <ul class="dlist">
+            <li>Four interactive masterclasses</li>
+            <li>Delivered online</li>
+            <li>Open cohort, building a supportive network across organisations</li>
+            <li>Cohorts start April, June, September and November</li>
+            <li>Hosted throughout by Sarah Knight</li>
+            <li>Closing panel with senior business leaders</li>
+          </ul>
+        </div>
+        <div class="dcard dcard--price">
+          <h3>Investment</h3>
+          <p class="price">&pound;1,349<span class="vat">Per person plus VAT, all four masterclasses</span></p>
+          <ul class="dlist">
+            <li>No additional cost per session</li>
+            <li>Reduced rates as group numbers rise</li>
+            <li>No minimum number of places</li>
+            <li>Empower+ scoped and priced separately</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="btns">
+        <a class="btn btn--solid" href="#empower-enquire">Book places on the next cohort</a>
+        <a class="btn btn--outline" href="#empower-enquire">Talk to us about a group</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NETWORK ==================== -->
+  <section class="s s--blush">
+    <div class="wrap">
+      <div class="nethead">
+        <div>
+          <span class="eyebrow">Beyond the programme</span>
+          <h2 class="h2">More than a programme.<br />A network.</h2>
+          <p class="body">As an RTB client, you and your teams get more than the programme itself. Through our network of 900+ speakers and experts, your people get live webinars running alongside their programme, events, resources and the chance to book global experts directly.</p>
+        </div>
+        <div class="netlinks">
+          <a href="https://raisethebar.co.uk/insights/">View all insights</a>
+          <a href="https://raisethebar.co.uk/motivational-speakers/">View all our experts</a>
+        </div>
+      </div>
+
+      <div class="spkrs">
+        <a class="spkr" href="https://raisethebar.co.uk/speaker/dame-kelly-holmes-mbe/">
+          <div class="spkr__media">
+            <img src="https://raisethebar.co.uk/wp-content/uploads/2024/04/Dame-Kelly_Holmes_DKH_ProfilePic.jpeg" alt="Dame Kelly Holmes" width="1419" height="1600" loading="lazy" />
+            <span class="spkr__tag">Featured speaker</span>
+          </div>
+          <div class="spkr__body">
+            <h3>Dame Kelly Holmes</h3>
+            <p>Former double Olympic champion on leadership, high performance and mental health.</p>
+          </div>
+        </a>
+        <a class="spkr" href="https://raisethebar.co.uk/speaker/erica-farmer/">
+          <div class="spkr__media">
+            <img src="https://raisethebar.co.uk/wp-content/uploads/2025/05/Erica_Farmer_Erica-Farmer-4-scaled.jpg" alt="Erica Farmer" width="1707" height="2560" loading="lazy" />
+            <span class="spkr__tag">Featured speaker</span>
+          </div>
+          <div class="spkr__body">
+            <h3>Erica Farmer</h3>
+            <p>AI and future skills specialist with 25 years in learning and development.</p>
+          </div>
+        </a>
+        <a class="spkr" href="https://raisethebar.co.uk/management-development-case-study-telent/">
+          <div class="spkr__media">
+            <img src="https://raisethebar.co.uk/wp-content/uploads/2026/05/Telent-crpped.png" alt="Telent management development" width="1005" height="507" loading="lazy" />
+            <span class="spkr__tag spkr__tag--case">Case study</span>
+          </div>
+          <div class="spkr__body">
+            <h3>Over 10 years of award winning development at Telent</h3>
+            <p>650+ leaders across 46 cohorts. Ten years of evidence that a structured programme changes who gets promoted.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="s s--lilac">
+    <div class="wrap">
+      <span class="eyebrow">Questions</span>
+      <h2 class="h2">Empower FAQs</h2>
+
+      <div class="faq">
+        <details>
+          <summary>What is Empower?</summary>
+          <div class="faq__a">
+            <p>A four-masterclass programme for women ready to take the next step, led by high-performing women in business. Kate Richardson-Walsh OBE, Olympic gold medallist and GB hockey captain, on mindset. Sonya Barlow, award-winning BBC presenter and author, on the future of women at work. Penny Haslam, former BBC business journalist, on confidence and assertiveness. Sarah Furness, former RAF combat helicopter pilot, on performing under pressure.</p>
+            <p>The programme closes with a panel discussion featuring senior business leaders who have reached the top of their fields. Delivered online as an open cohort, starting in April, June, September and November, at &pound;1,349 plus VAT per person.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Who is Empower for?</summary>
+          <div class="faq__a">
+            <p>Women in your organisation who are ready to take the next step in their career, whatever that step looks like. It suits individuals and larger groups. It is a programme for women in business, created by women in business.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is a women in leadership programme?</summary>
+          <div class="faq__a">
+            <p>A development programme focused on what helps women progress at work: confidence, visibility, assertive communication and building a career in a changing world of work. The most effective are led by women who have achieved at the highest level themselves. Empower is four masterclasses led by high performing women.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can we put a group of our own women through Empower together?</summary>
+          <div class="faq__a">
+            <p>Yes, and you can also put one. There is no minimum. Individuals join a cohort of women from other organisations, which is where much of the perspective and honesty comes from.</p>
+            <p>Where you enrol a group, they build internal connections alongside that external network, and Empower+ then adds sessions that run for your group only.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What does Empower cost?</summary>
+          <div class="faq__a">
+            <p>&pound;1,349 plus VAT per person for all four masterclasses, with reduced rates for larger groups. There is no additional cost per session. Empower+ is scoped and priced separately, around the outcomes you want beyond the four sessions.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you offer discounts for larger groups?</summary>
+          <div class="faq__a">
+            <p>Yes. The per person rate reduces as numbers rise, so putting a whole group of your female talent through works out cheaper per person than enrolling a few individuals. Talk to our team with the number you have in mind and we will price against it.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What actually happens in an Empower session?</summary>
+          <div class="faq__a">
+            <p>Every session is fully interactive. The expert shares her own story and takes questions directly, then participants move into facilitated group work to apply it to their own roles. Sarah Knight hosts all four sessions, and the programme closes with a panel of senior business leaders.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Which experts lead Empower?</summary>
+          <div class="faq__a">
+            <p>Four high-performing women, each leading one masterclass. Kate Richardson-Walsh OBE, Olympic gold medallist and captain of the GB and England hockey teams for 13 years, on mindset and leading from within. Sonya Barlow, award-winning BBC presenter, author and entrepreneur, on the future of women at work. Penny Haslam, former BBC business journalist and author, on confidence, influence and assertiveness. Sarah Furness, former RAF combat helicopter pilot and author, on performing at your best under pressure.</p>
+            <p>The programme closes with a panel of senior business leaders who have reached the top of their fields, discussing the part women play in building workplaces where people can grow.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do you measure the impact of a leadership programme?</summary>
+          <div class="faq__a">
+            <p>Session feedback tells you how the day went, not what changed. Agree the measures before the programme starts, using numbers the business already tracks: retention across the population you are developing, engagement, internal promotion and application rates. Empower+ can open with a launch event to set those objectives and close with a Distance Travelled event to evidence movement against them.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is Empower+?</summary>
+          <div class="faq__a">
+            <p>The extended version, and the part that runs exclusively for your organisation. Alongside the four online masterclasses, and depending on the scope you choose, it can include action learning sets, one-to-one and executive coaching, a launch event to set objectives and a Distance Travelled event to evidence impact. All of it runs for your female talent only, online or face to face, and is scoped and priced around the outcomes you want.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Are women's leadership programmes accredited?</summary>
+          <div class="faq__a">
+            <p>Some are, most are not, and accreditation adds cost and assessment workload in return for portable recognition. Empower focuses on confidence, capability and network rather than a qualification. Where a qualification is the requirement, our Leadership Accelerator leads to CMI Chartered Manager status.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How is Empower different from a general leadership programme?</summary>
+          <div class="faq__a">
+            <p>Empower focuses on what helps women step up, taught by women who have led at the highest level. The cohort matters as much as the content: your female talent builds a network of peers at the same stage, working towards the same goals.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How does Empower compare to Change Catalyst?</summary>
+          <div class="faq__a">
+            <p>Change Catalyst develops senior leaders across six sessions with globally recognised experts on transformation, commercial thinking and high performance. Empower is four sessions for women ready to take the next step, focused on confidence, visibility and career progression. Some organisations run both, with different populations on each.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="s final" id="empower-enquire">
+    <div class="wrap final__in">
+      <span class="eyebrow">Next cohorts: April, June, September, November</span>
+      <h2 class="h2">Name the women<br />who are ready</h2>
+      <p>Tell us how many places you need and we will price against it. One or fifty, the next cohort is open.</p>
+      <div class="btns">
+        <a class="btn btn--onpurple" href="https://raisethebar.co.uk/contact-us/">Enquire about Empower</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "@id": "https://raisethebar.co.uk/programme/empower-women-in-business/#course",
+      "name": "Empower: Women in Leadership Programme",
+      "description": "Four online masterclasses led by high-performing women in business, built around what slows progression for women at work: confidence, visibility, influence and performing under pressure.",
+      "url": "https://raisethebar.co.uk/programme/empower-women-in-business/",
+      "provider": { "@type": "Organization", "name": "Raise the Bar", "url": "https://raisethebar.co.uk/" },
+      "audience": { "@type": "Audience", "audienceType": "High-performing female managers, emerging leaders and identified talent" },
+      "offers": {
+        "@type": "Offer",
+        "price": "1349",
+        "priceCurrency": "GBP",
+        "category": "Per person, excluding VAT",
+        "availability": "https://schema.org/InStock",
+        "url": "https://raisethebar.co.uk/programme/empower-women-in-business/"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT4H",
+        "instructor": [
+          { "@type": "Person", "name": "Kate Richardson-Walsh OBE" },
+          { "@type": "Person", "name": "Sonya Barlow" },
+          { "@type": "Person", "name": "Penny Haslam" },
+          { "@type": "Person", "name": "Sarah Furness" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://raisethebar.co.uk/programme/empower-women-in-business/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Empower?", "acceptedAnswer": { "@type": "Answer", "text": "A four-masterclass programme for women ready to take the next step, led by high-performing women in business. Kate Richardson-Walsh OBE on mindset, Sonya Barlow on the future of women at work, Penny Haslam on confidence and assertiveness, and Sarah Furness on performing under pressure. The programme closes with a panel of senior business leaders. Delivered online as an open cohort, starting in April, June, September and November, at 1349 GBP plus VAT per person." } },
+        { "@type": "Question", "name": "Who is Empower for?", "acceptedAnswer": { "@type": "Answer", "text": "Women in your organisation who are ready to take the next step in their career, whatever that step looks like. It suits individuals and larger groups. It is a programme for women in business, created by women in business." } },
+        { "@type": "Question", "name": "What is a women in leadership programme?", "acceptedAnswer": { "@type": "Answer", "text": "A development programme focused on what helps women progress at work: confidence, visibility, assertive communication and building a career in a changing world of work. The most effective are led by women who have achieved at the highest level themselves. Empower is four masterclasses led by high performing women." } },
+        { "@type": "Question", "name": "Can we put a group of our own women through Empower together?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and you can also put one. There is no minimum. Individuals join a cohort of women from other organisations, which is where much of the perspective and honesty comes from. Where you enrol a group, they build internal connections alongside that external network, and Empower+ then adds sessions that run for your group only." } },
+        { "@type": "Question", "name": "What does Empower cost?", "acceptedAnswer": { "@type": "Answer", "text": "1349 GBP plus VAT per person for all four masterclasses, with reduced rates for larger groups. There is no additional cost per session. Empower+ is scoped and priced separately, around the outcomes you want beyond the four sessions." } },
+        { "@type": "Question", "name": "Do you offer discounts for larger groups?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The per person rate reduces as numbers rise, so putting a whole group of your female talent through works out cheaper per person than enrolling a few individuals. Talk to our team with the number you have in mind and we will price against it." } },
+        { "@type": "Question", "name": "What actually happens in an Empower session?", "acceptedAnswer": { "@type": "Answer", "text": "Every session is fully interactive. The expert shares her own story and takes questions directly, then participants move into facilitated group work to apply it to their own roles. Sarah Knight hosts all four sessions, and the programme closes with a panel of senior business leaders." } },
+        { "@type": "Question", "name": "Which experts lead Empower?", "acceptedAnswer": { "@type": "Answer", "text": "Four high-performing women, each leading one masterclass. Kate Richardson-Walsh OBE, Olympic gold medallist and captain of the GB and England hockey teams for 13 years, on mindset and leading from within. Sonya Barlow, award-winning BBC presenter, author and entrepreneur, on the future of women at work. Penny Haslam, former BBC business journalist and author, on confidence, influence and assertiveness. Sarah Furness, former RAF combat helicopter pilot and author, on performing at your best under pressure. The programme closes with a panel of senior business leaders." } },
+        { "@type": "Question", "name": "How do you measure the impact of a leadership programme?", "acceptedAnswer": { "@type": "Answer", "text": "Session feedback tells you how the day went, not what changed. Agree the measures before the programme starts, using numbers the business already tracks: retention across the population you are developing, engagement, internal promotion and application rates. Empower+ can open with a launch event to set those objectives and close with a Distance Travelled event to evidence movement against them." } },
+        { "@type": "Question", "name": "What is Empower+?", "acceptedAnswer": { "@type": "Answer", "text": "The extended version, and the part that runs exclusively for your organisation. Alongside the four online masterclasses, and depending on the scope you choose, it can include action learning sets, one-to-one and executive coaching, a launch event to set objectives and a Distance Travelled event to evidence impact. All of it runs for your female talent only, online or face to face, and is scoped and priced around the outcomes you want." } },
+        { "@type": "Question", "name": "Are women's leadership programmes accredited?", "acceptedAnswer": { "@type": "Answer", "text": "Some are, most are not, and accreditation adds cost and assessment workload in return for portable recognition. Empower focuses on confidence, capability and network rather than a qualification. Where a qualification is the requirement, our Leadership Accelerator leads to CMI Chartered Manager status." } },
+        { "@type": "Question", "name": "How is Empower different from a general leadership programme?", "acceptedAnswer": { "@type": "Answer", "text": "Empower focuses on what helps women step up, taught by women who have led at the highest level. The cohort matters as much as the content: your female talent builds a network of peers at the same stage, working towards the same goals." } },
+        { "@type": "Question", "name": "How does Empower compare to Change Catalyst?", "acceptedAnswer": { "@type": "Answer", "text": "Change Catalyst develops senior leaders across six sessions with globally recognised experts on transformation, commercial thinking and high performance. Empower is four sessions for women ready to take the next step, focused on confidence, visibility and career progression. Some organisations run both, with different populations on each." } }
+      ]
+    }
+  ]
+}
+</script>
