@@ -224,6 +224,9 @@ EDITS = [
     (r'\s*<span class="flag">One place or fifty\. No minimum\.</span>', ""),
     # Empower+ button label
     (r'>Talk to us about scope</a>', ">Let&rsquo;s talk</a>"),
+    # Final CTA opens an email, as on Change Catalyst
+    (r'href="https://raisethebar\.co\.uk/contact-us/">Enquire about Empower',
+     'href="mailto:enquiries@raisethebar.co.uk?subject=Empower%20Enquiry">Enquire about Empower'),
     # Format and investment: remove the Format card
     (r'\s*<div class="dcard">\s*<h3>Format</h3>.*?</ul>\s*</div>', ""),
 ]
