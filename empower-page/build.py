@@ -96,6 +96,8 @@ def pick(variants, min_w):
 def rebuild_img(m):
     tag = m.group(0)
     src = re.search(r'src="([^"]+)"', tag).group(1).replace(UP, "")
+    if src not in SRC_KEY:
+        return tag  # single-size asset, used as is
     alt = re.search(r'alt="([^"]*)"', tag).group(1)
     cls = re.search(r'class="([^"]+)"', tag)
     cls = cls.group(1) if cls else None
@@ -211,8 +213,32 @@ def minify_css(css):
     return css.replace(";}", "}").strip()
 
 
+# Changes signed off after the handoff (7 Oct). Applied to the reference before
+# the build, so the copy check still guards everything else.
+ARROW = UP + "2024/04/RTB-Pink-Arrow.png"
+EDITS = [
+    # Raise the Bar arrow replaces the drawn Empower symbol
+    (r'<svg viewBox="0 0 200 320".*?</svg>',
+     f'<img src="{ARROW}" alt="" width="528" height="528" decoding="async" />'),
+    # Hero strip: drop the "no minimum" flag
+    (r'\s*<span class="flag">One place or fifty\. No minimum\.</span>', ""),
+    # Empower+ button label
+    (r'>Talk to us about scope</a>', ">Let&rsquo;s talk</a>"),
+    # Format and investment: remove the Format card
+    (r'\s*<div class="dcard">\s*<h3>Format</h3>.*?</ul>\s*</div>', ""),
+]
+
+
+def apply_edits(markup):
+    for pattern, repl in EDITS:
+        markup, n = re.subn(pattern, repl, markup, count=1, flags=re.S)
+        if n != 1:
+            sys.exit(f"Edit did not apply: {pattern}")
+    return markup
+
+
 def build():
-    ref = REF.read_text(encoding="utf-8")
+    ref = apply_edits(REF.read_text(encoding="utf-8"))
     body = re.search(r'(<div class="emp-page">.*</div>)\s*<script type="application/ld\+json">', ref, re.S).group(1)
 
     body = re.sub(r"<!--.*?-->\s*", "", body, flags=re.S)  # internal notes must not ship in page source

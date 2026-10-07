@@ -13,6 +13,17 @@ Replaces https://raisethebar.co.uk/programme/empower-women-in-business/ (program
 
 Rebuild after any change: `python3 build.py`, then paste `dist/empower-page.html` into the page's Custom HTML block (or push it via the MCP connector).
 
+## Changes signed off on 7 October
+
+Applied through `EDITS` in `build.py`, so the copy check still guards everything else.
+
+- More space above the hero (144px desktop, 96px mobile) to clear the site menu.
+- Drawn Empower symbol replaced with the Raise the Bar arrow (`RTB-Pink-Arrow.png`, media 65815) on a purple-tint circle.
+- Hero strip: "One place or fifty. No minimum." removed.
+- Empower+ button now reads "Let's talk".
+- Format and investment: Format card removed. The Investment card now runs full width, with the price on the left and the list on the right (stacked on mobile).
+- Network cards: tags moved to the bottom-left of the image so they don't cover faces (this was hiding Dame Kelly Holmes).
+
 ## What changed from the reference (no copy changes)
 
 - Dropped the inline `@font-face` rules. They pointed at `/themes/857ifd-raise-the-bar/` and `/themes/raise-the-bar/`, which do not exist (the theme folder is `raisethebar`), so every font request would 404 before falling back. The page now uses the theme's own Capitana and Agenda, as Change Catalyst does.
