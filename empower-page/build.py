@@ -230,6 +230,8 @@ EDITS = [
      f'href="{MAILTO}">Enquire about Empower'),
     # Every enquiry button opens the same email (4 buttons)
     (r'href="#empower-enquire"', f'href="{MAILTO}"', 4),
+    # FAQ: drop the Change Catalyst comparison
+    (r'\s*<details>\s*<summary>How does Empower compare to Change Catalyst\?</summary>.*?</details>', ""),
     # Format and investment: remove the Format card
     (r'\s*<div class="dcard">\s*<h3>Format</h3>.*?</ul>\s*</div>', ""),
 ]
