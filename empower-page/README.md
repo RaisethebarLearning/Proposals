@@ -2,7 +2,7 @@
 
 Replaces https://raisethebar.co.uk/programme/empower-women-in-business/ (programme post 64064, ACF layout).
 
-**Status:** page **79676** published 7 October at https://raisethebar.co.uk/development-programmes/empower-women-in-business/. Outstanding: 301 from the old URL (Redirection) and Yoast title and description (editor only). Parent: Development Solutions (64019). Template: `blank-custom.php`. Same setup as the live Change Catalyst page (78361).
+**Status:** the new build is the content of the original Empower programme post **64064** (rewritten in place 7 October, keeping `/programme/empower-women-in-business/`). The post needs its template set to Blank in the editor so the new layout renders. Draft page 79676 is the earlier copy under `/development-programmes/`. It is unpublished and can be deleted.
 
 ## Files
 

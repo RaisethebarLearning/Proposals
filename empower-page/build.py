@@ -20,7 +20,7 @@ CSS = ROOT / "src" / "empower.css"
 OUT = ROOT / "dist" / "empower-page.html"
 
 # Final public URL of the page. Change here if it goes live somewhere else.
-PAGE_URL = "https://raisethebar.co.uk/development-programmes/empower-women-in-business/"
+PAGE_URL = "https://raisethebar.co.uk/programme/empower-women-in-business/"
 UP = "https://raisethebar.co.uk/wp-content/uploads/"
 
 # Media library variants, same crop as the original only (WordPress keeps some
