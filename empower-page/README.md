@@ -22,7 +22,7 @@ Applied through `EDITS` in `build.py`, so the copy check still guards everything
 - Hero strip: "One place or fifty. No minimum." removed.
 - Empower+ button now reads "Let's talk".
 - Format and investment: Format card removed. The Investment card now runs full width, with the price on the left and the list on the right (stacked on mobile).
-- Final button "Enquire about Empower" opens an email to enquiries@raisethebar.co.uk with the subject "Empower Enquiry", as on Change Catalyst.
+- All five enquiry buttons (both "Book places on the next cohort", "Talk to us about a group", "Let's talk" and "Enquire about Empower") open an email to enquiries@raisethebar.co.uk with the subject "Empower Enquiry", as on Change Catalyst.
 - Network cards: tags moved to the bottom-left of the image so they don't cover faces (this was hiding Dame Kelly Holmes).
 
 ## What changed from the reference (no copy changes)

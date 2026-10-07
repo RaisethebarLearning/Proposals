@@ -216,6 +216,7 @@ def minify_css(css):
 # Changes signed off after the handoff (7 Oct). Applied to the reference before
 # the build, so the copy check still guards everything else.
 ARROW = UP + "2024/04/RTB-Pink-Arrow.png"
+MAILTO = "mailto:enquiries@raisethebar.co.uk?subject=Empower%20Enquiry"
 EDITS = [
     # Raise the Bar arrow replaces the drawn Empower symbol
     (r'<svg viewBox="0 0 200 320".*?</svg>',
@@ -226,16 +227,19 @@ EDITS = [
     (r'>Talk to us about scope</a>', ">Let&rsquo;s talk</a>"),
     # Final CTA opens an email, as on Change Catalyst
     (r'href="https://raisethebar\.co\.uk/contact-us/">Enquire about Empower',
-     'href="mailto:enquiries@raisethebar.co.uk?subject=Empower%20Enquiry">Enquire about Empower'),
+     f'href="{MAILTO}">Enquire about Empower'),
+    # Every enquiry button opens the same email (4 buttons)
+    (r'href="#empower-enquire"', f'href="{MAILTO}"', 4),
     # Format and investment: remove the Format card
     (r'\s*<div class="dcard">\s*<h3>Format</h3>.*?</ul>\s*</div>', ""),
 ]
 
 
 def apply_edits(markup):
-    for pattern, repl in EDITS:
-        markup, n = re.subn(pattern, repl, markup, count=1, flags=re.S)
-        if n != 1:
+    for pattern, repl, *expect in EDITS:
+        expect = expect[0] if expect else 1
+        markup, n = re.subn(pattern, repl, markup, count=expect, flags=re.S)
+        if n != expect:
             sys.exit(f"Edit did not apply: {pattern}")
     return markup
 
